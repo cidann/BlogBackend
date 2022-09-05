@@ -1,0 +1,29 @@
+<body>
+<script>
+  fetch('http://127.0.0.1:8000/api/users/auth/login', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({username: 'super', password: 's1234'}),
+            credentials: 'include'
+        })
+</script>
+
+<form method="post">
+  <div className="form-floating mb-3">
+    <input value={newUsername}  className="form-control" name="username" placeholder="Username"/>
+    <label>Username</label>
+  </div>
+  <div className="form-floating mb-3">
+    <input value={newPassword}  type="password" className="form-control" name="password" placeholder="Password"/>
+
+    <label>Password</label>
+  </div>
+  <div className="d-grid">
+    <button className="btn btn-primary btn-login text-uppercase fw-bold" type="submit">Sign
+      in</button>
+  </div>
+</form>
+</body>
